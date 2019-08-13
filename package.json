@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/CCIP-App/CCIP-Puzzle-Config-Generator-Chocolate/issues"
   },
-  "homepage": "https://github.com/CCIP-App/CCIP-Puzzle-Config-Generator-Chocolate#readme"
+  "homepage": "https://github.com/CCIP-App/CCIP-Puzzle-Config-Generator-Chocolate#readme",
+  "dependencies": {
+    "spreadsheet-to-json": "^1.3.1"
+  }
 }
