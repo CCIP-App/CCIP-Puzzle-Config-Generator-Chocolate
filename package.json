@@ -1,0 +1,22 @@
+{
+  "name": "ccip-puzzle-config-generator-chocolate",
+  "version": "1.0.0",
+  "description": "Generate configuration for ccip-puzzle-chocolate from google sheets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CCIP-App/CCIP-Puzzle-Config-Generator-Chocolate.git"
+  },
+  "keywords": [
+    "ccip"
+  ],
+  "author": "Erickson Zhuang <bingluen0224@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/CCIP-App/CCIP-Puzzle-Config-Generator-Chocolate/issues"
+  },
+  "homepage": "https://github.com/CCIP-App/CCIP-Puzzle-Config-Generator-Chocolate#readme"
+}
