@@ -10,7 +10,7 @@ extractSheets({
       const boothI18nColumns = ['displayText', 'description'];
       const { Booth: boothList, Config } = data;
       const booths = boothList.map(({
-        slug, significant, imageUrl, point, isBonus, ...others
+        slug, significant, image_url: imageUrl, point, isBonus, ...others
       }) => (
         {
           slug,
