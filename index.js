@@ -70,7 +70,7 @@ extractSheets({
       });
       console.log(output);
     } catch (e) {
-      console.log(e);
+      console.error(e);
     }
   }
 });
