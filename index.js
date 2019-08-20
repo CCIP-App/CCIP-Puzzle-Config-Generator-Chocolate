@@ -10,9 +10,28 @@ extractSheets({
       const boothI18nColumns = ['displayText', 'description'];
       const { Booth: boothList, Config } = data;
       const booths = boothList.map(({
-        slug, significant, image_url: imageUrl, point, isBonus, ...others
-      }) => (
-        {
+        slug, significant, image_url: imageUrl, point: rawPoint, isBonus: rawIsBonus, ...others
+      }) => {
+        const point = Number.parseInt(rawPoint, 10);
+        const isBonus = ((isBonusValue) => {
+          switch (isBonusValue && isBonusValue.toLowerCase()) {
+            case 'false':
+              return false;
+            case 'true':
+              return true;
+            default:
+              return null;
+          }
+        })(rawIsBonus);
+
+        if (isBonus === null) {
+          console.error({
+            slug, significant, imageUrl, point: rawPoint, isBonus: rawIsBonus, ...others,
+          });
+          throw new Error('isBonus is not given.');
+        }
+
+        return {
           slug,
           significant,
           imageUrl,
@@ -26,8 +45,8 @@ extractSheets({
                 return Object.assign(i18nDict, { [newKey[1]]: others[keyLang] });
               }, {}),
           }), {}),
-        }
-      ));
+        };
+      });
 
       const configI18nColumns = ['title'];
       const { conf_name: confName, bingo_pattern: bingoPattern, ...others } = Config.reduce(
