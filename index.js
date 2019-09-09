@@ -48,7 +48,7 @@ extractSheets({
         };
       });
 
-      const configI18nColumns = ['title'];
+      const configI18nColumns = ['title', 'description'];
       const { conf_name: confName, bingo_pattern: bingoPattern, ...others } = Config.reduce(
         (dict, item) => Object.assign(dict, { [item.ColumnName]: item.Value }), {},
       );
